@@ -7,7 +7,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
-
+//
 namespace IHaveIdeas.Card
 {
     public sealed partial class Card : Page
