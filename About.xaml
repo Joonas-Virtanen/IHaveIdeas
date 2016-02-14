@@ -1,0 +1,74 @@
+﻿<Page
+    x:Class="IHaveIdeas.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IHaveIdeas"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource AppBarItemForegroundThemeBrush}">
+        <RichTextBlock HorizontalAlignment="Left" Height="763.138" VerticalAlignment="Top" Width="426.486" RenderTransformOrigin="0.5,0.5" Margin="0.327,-0.131,0,0" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <RichTextBlock.RenderTransform>
+                <CompositeTransform Rotation="-0.181"/>
+            </RichTextBlock.RenderTransform>
+            <Paragraph>
+                <Run FontWeight="Bold" FontSize="24" Text="General information" Foreground="White"/>
+                <Bold>
+                    <LineBreak/>
+                </Bold>
+                <Run FontWeight="Normal" Foreground="White" Text="I Have Ideas have been made as part of the &quot;Mobile Application Design&quot; course at Metropolia (University of Applied Sciences in Finland)." FontSize="17.667"/>
+                <Run FontWeight="Normal" Foreground="White" Text=" This application was created specially for those who have problems creating a story. " FontSize="17.667"/>
+            </Paragraph>
+            <Paragraph/>
+            <Paragraph/>
+            <Paragraph/>
+            <Paragraph/>
+            <Paragraph>
+                <LineBreak/>
+                <Run FontWeight="Bold" FontSize="24" Foreground="White" Text="Created by"/>
+                <LineBreak/>
+                <LineBreak Foreground="White" FontFamily="Portable User Interface"/>
+                <Run FontWeight="Bold" Foreground="White" Text="Joonas Virtanen -Programmer"/>
+                <Run FontWeight="Bold" Foreground="White" Text=" and Designer"/>
+            </Paragraph>
+            <Paragraph Foreground="White">
+                <Run Foreground="White" Text="joonas.virtanen.jv@gmail.com"/>
+            </Paragraph>
+            <Paragraph>
+                <Run/>
+            </Paragraph>
+            <Paragraph>
+                <Run FontWeight="Bold" Foreground="White" Text="Ismail Belmostefa -Designer"/>
+            </Paragraph>
+            <Paragraph>
+                <Run Foreground="White" Text="xdvarpunen@gmail.com"/>
+            </Paragraph>
+            <Paragraph>
+                <Run FontWeight="Bold"/>
+            </Paragraph>
+            <Paragraph Foreground="White">
+                <Run FontWeight="Bold" Text="Antti Halonen -Designer"/>
+            </Paragraph>
+            <Paragraph Foreground="White">
+                <Run Text="antti.halonen84@gmail.com"/>
+            </Paragraph>
+            <Paragraph Foreground="White">
+                <Run FontWeight="Bold"/>
+            </Paragraph>
+            <Paragraph>
+                <Run/>
+            </Paragraph>
+            <Paragraph>
+                <Run/>
+            </Paragraph>
+        </RichTextBlock>
+        <Button Foreground="White" Content=" See the instructions"  HorizontalAlignment="Left" Margin="0,716,0,0" VerticalAlignment="Top" BorderThickness="3" Click="Button_Click" Height="42" Width="221" FontSize="17.667" FontWeight="Bold" BorderBrush="#FF979696"/>
+        <Button Foreground="White" x:Name="Home_Button" Content="" HorizontalAlignment="Left" Margin="226,660,0,0" VerticalAlignment="Top" Height="98" Width="124" BorderBrush="#FFFDFDFD" BorderThickness="1" RenderTransformOrigin="1.525,0.749" Click="Home_Button_Click" >
+            <Button.Background>
+                <ImageBrush Stretch="Fill" ImageSource="/Images/home-icon.png"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Page>

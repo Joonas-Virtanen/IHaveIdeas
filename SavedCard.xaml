@@ -1,0 +1,40 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IHaveIdeas"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ViewModel="using:IHaveIdeas.ViewModel"
+    x:Class="IHaveIdeas.SavedCard.SavedCard"
+    mc:Ignorable="d"
+    DataContext="{Binding Path=vm.currentModel}"
+    >
+    <Grid Background="{ThemeResource AppBarItemForegroundThemeBrush}">
+        <Grid x:Name="LayoutRoot" Height="768" VerticalAlignment="Top" Width="432" HorizontalAlignment="Left" Margin="10,10,-10,-10">
+            <TextBlock x:Name="VerbiTextBlock"  Text="{x:Bind vm.currentModel.Verb, Mode=OneWay }" HorizontalAlignment="Left" Margin="53,380,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="65" Width="300" TextAlignment="Center" FontWeight="Bold" FontSize="36" FontFamily="Microsoft NeoGothic" Foreground="White" />
+            <TextBlock x:Name="AdjektiiviTextBlock" Text="{x:Bind vm.currentModel.Adjective, Mode=OneWay }" HorizontalAlignment="Left" Margin="53,450,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="65" Width="300" TextAlignment="Center" FontWeight="Bold" FontSize="36" FontFamily="Microsoft NeoGothic" Foreground="White"/>
+            <TextBlock x:Name="SubsanttiiviTextBlock" Text="{x:Bind vm.currentModel.Noun, Mode=OneWay }" HorizontalAlignment="Left" Margin="53,520,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="65" Width="300" TextAlignment="Center" FontWeight="Bold" FontSize="36" FontFamily="Microsoft NeoGothic" Foreground="White"/>
+            <Image x:Name="RandomKuva" Source="{x:Bind vm.currentModel.Source, Mode=OneWay }"  HorizontalAlignment="Left" Height="307" Margin="55,42,0,0" VerticalAlignment="Top" Width="300" Stretch="Fill"/>
+            <Button x:Name="NewCard" Content="" HorizontalAlignment="Left" Margin="280,630,0,0" VerticalAlignment="Top" FontFamily="Estrangelo Edessa" FontWeight="Bold" Click="NextCard_Click" BorderThickness="0" Height="65" Width="73">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/right.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="Previous_Button" Content="" HorizontalAlignment="Left" Margin="55,630,0,0" VerticalAlignment="Top" FontFamily="Estrangelo Edessa" FontWeight="Bold" Click="PreviousCard_Click" BorderThickness="0" Height="65" Width="73" RenderTransformOrigin="0.663,-0.412">
+                <Button.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="/Images/left.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="Home_button" Content="" HorizontalAlignment="Left" Margin="150,600,0,0" VerticalAlignment="Top" BorderThickness="0" Height="110" Width="107" Click="To_home_Click">
+                <Button.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="/Images/home-icon.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="Remove_button" Content="" HorizontalAlignment="Left" Margin="365,0,0,0" VerticalAlignment="Top" Height="51" Width="52" Click="Remove_button_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/can.png"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+    </Grid>
+</Page>

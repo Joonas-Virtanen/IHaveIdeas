@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{7E57E29D-0C01-43CD-A790-57F3964C4011}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IHasIdeas</RootNamespace>
+    <AssemblyName>IHasIdeas</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.10240.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>IHaveIdeas_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>34285DE04583D08CE217D628987404781E16F760</PackageCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS</DefineConstants>
+    <Optimize>false</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>false</UseDotNetNativeToolchain>
+    <EnableGatekeeperAnalysis>false</EnableGatekeeperAnalysis>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Images\can2.png" />
+    <Content Include="Images\Card2.png" />
+    <Content Include="Images\home-icon2.png" />
+    <Content Include="SQLitedb.sqlite">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseCards.xaml.cs">
+      <DependentUpon>BrowseCards.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SavedCard.xaml.cs">
+      <DependentUpon>SavedCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Card.xaml.cs">
+      <DependentUpon>Card.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseDelete.cs" />
+    <Compile Include="DatabaseUpdate.cs" />
+    <Compile Include="FetchDatabaseData.cs" />
+    <Compile Include="InstructionCard.xaml.cs">
+      <DependentUpon>InstructionCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Adjectives.cs" />
+    <Compile Include="Models\CardCurrent.cs" />
+    <Compile Include="Models\GeneratedCard.cs" />
+    <Compile Include="Models\Images.cs" />
+    <Compile Include="Models\Nouns.cs" />
+    <Compile Include="Models\SavedCardPack.cs" />
+    <Compile Include="Models\Verbs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\BrowseCardsViewModel.cs" />
+    <Compile Include="ViewModel\CardViewModel.cs" />
+    <Compile Include="ViewModel\SavedCardsViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DatabaseImages\0.png" />
+    <Content Include="DatabaseImages\1.png" />
+    <Content Include="DatabaseImages\10.png" />
+    <Content Include="DatabaseImages\100.png" />
+    <Content Include="DatabaseImages\101.png" />
+    <Content Include="DatabaseImages\102.png" />
+    <Content Include="DatabaseImages\103.png" />
+    <Content Include="DatabaseImages\104.png" />
+    <Content Include="DatabaseImages\105.png" />
+    <Content Include="DatabaseImages\106.png" />
+    <Content Include="DatabaseImages\107.png" />
+    <Content Include="DatabaseImages\108.png" />
+    <Content Include="DatabaseImages\109.png" />
+    <Content Include="DatabaseImages\11.png" />
+    <Content Include="DatabaseImages\110.png" />
+    <Content Include="DatabaseImages\111.png" />
+    <Content Include="DatabaseImages\112.png" />
+    <Content Include="DatabaseImages\113.png" />
+    <Content Include="DatabaseImages\114.png" />
+    <Content Include="DatabaseImages\115.png" />
+    <Content Include="DatabaseImages\116.png" />
+    <Content Include="DatabaseImages\117.png" />
+    <Content Include="DatabaseImages\118.png" />
+    <Content Include="DatabaseImages\119.png" />
+    <Content Include="DatabaseImages\12.png" />
+    <Content Include="DatabaseImages\120.png" />
+    <Content Include="DatabaseImages\121.png" />
+    <Content Include="DatabaseImages\122.png" />
+    <Content Include="DatabaseImages\123.png" />
+    <Content Include="DatabaseImages\124.png" />
+    <Content Include="DatabaseImages\125.png" />
+    <Content Include="DatabaseImages\126.png" />
+    <Content Include="DatabaseImages\127.png" />
+    <Content Include="DatabaseImages\128.png" />
+    <Content Include="DatabaseImages\129.png" />
+    <Content Include="DatabaseImages\13.png" />
+    <Content Include="DatabaseImages\130.png" />
+    <Content Include="DatabaseImages\131.png" />
+    <Content Include="DatabaseImages\132.png" />
+    <Content Include="DatabaseImages\133.png" />
+    <Content Include="DatabaseImages\134.png" />
+    <Content Include="DatabaseImages\135.png" />
+    <Content Include="DatabaseImages\136.png" />
+    <Content Include="DatabaseImages\137.png" />
+    <Content Include="DatabaseImages\138.png" />
+    <Content Include="DatabaseImages\139.png" />
+    <Content Include="DatabaseImages\14.png" />
+    <Content Include="DatabaseImages\140.png" />
+    <Content Include="DatabaseImages\141.png" />
+    <Content Include="DatabaseImages\142.png" />
+    <Content Include="DatabaseImages\143.png" />
+    <Content Include="DatabaseImages\144.png" />
+    <Content Include="DatabaseImages\145.png" />
+    <Content Include="DatabaseImages\146.png" />
+    <Content Include="DatabaseImages\147.png" />
+    <Content Include="DatabaseImages\148.png" />
+    <Content Include="DatabaseImages\149.png" />
+    <Content Include="DatabaseImages\15.png" />
+    <Content Include="DatabaseImages\150.png" />
+    <Content Include="DatabaseImages\151.png" />
+    <Content Include="DatabaseImages\152.png" />
+    <Content Include="DatabaseImages\153.png" />
+    <Content Include="DatabaseImages\154.png" />
+    <Content Include="DatabaseImages\155.png" />
+    <Content Include="DatabaseImages\156.png" />
+    <Content Include="DatabaseImages\157.png" />
+    <Content Include="DatabaseImages\158.png" />
+    <Content Include="DatabaseImages\159.png" />
+    <Content Include="DatabaseImages\16.png" />
+    <Content Include="DatabaseImages\160.png" />
+    <Content Include="DatabaseImages\161.png" />
+    <Content Include="DatabaseImages\162.png" />
+    <Content Include="DatabaseImages\163.png" />
+    <Content Include="DatabaseImages\164.png" />
+    <Content Include="DatabaseImages\165.png" />
+    <Content Include="DatabaseImages\166.png" />
+    <Content Include="DatabaseImages\167.png" />
+    <Content Include="DatabaseImages\168.png" />
+    <Content Include="DatabaseImages\169.png" />
+    <Content Include="DatabaseImages\17.png" />
+    <Content Include="DatabaseImages\170.png" />
+    <Content Include="DatabaseImages\171.png" />
+    <Content Include="DatabaseImages\172.png" />
+    <Content Include="DatabaseImages\173.png" />
+    <Content Include="DatabaseImages\174.png" />
+    <Content Include="DatabaseImages\175.png" />
+    <Content Include="DatabaseImages\18.png" />
+    <Content Include="DatabaseImages\19.png" />
+    <Content Include="DatabaseImages\2.png" />
+    <Content Include="DatabaseImages\20.png" />
+    <Content Include="DatabaseImages\21.png" />
+    <Content Include="DatabaseImages\22.png" />
+    <Content Include="DatabaseImages\23.png" />
+    <Content Include="DatabaseImages\24.png" />
+    <Content Include="DatabaseImages\25.png" />
+    <Content Include="DatabaseImages\26.png" />
+    <Content Include="DatabaseImages\27.png" />
+    <Content Include="DatabaseImages\28.png" />
+    <Content Include="DatabaseImages\29.png" />
+    <Content Include="DatabaseImages\3.png" />
+    <Content Include="DatabaseImages\30.png" />
+    <Content Include="DatabaseImages\31.png" />
+    <Content Include="DatabaseImages\32.png" />
+    <Content Include="DatabaseImages\33.png" />
+    <Content Include="DatabaseImages\34.png" />
+    <Content Include="DatabaseImages\35.png" />
+    <Content Include="DatabaseImages\36.png" />
+    <Content Include="DatabaseImages\37.png" />
+    <Content Include="DatabaseImages\38.png" />
+    <Content Include="DatabaseImages\39.png" />
+    <Content Include="DatabaseImages\4.png" />
+    <Content Include="DatabaseImages\40.png" />
+    <Content Include="DatabaseImages\41.png" />
+    <Content Include="DatabaseImages\42.png" />
+    <Content Include="DatabaseImages\43.png" />
+    <Content Include="DatabaseImages\44.png" />
+    <Content Include="DatabaseImages\45.png" />
+    <Content Include="DatabaseImages\46.png" />
+    <Content Include="DatabaseImages\47.png" />
+    <Content Include="DatabaseImages\48.png" />
+    <Content Include="DatabaseImages\49.png" />
+    <Content Include="DatabaseImages\5.png" />
+    <Content Include="DatabaseImages\50.png" />
+    <Content Include="DatabaseImages\51.png" />
+    <Content Include="DatabaseImages\52.png" />
+    <Content Include="DatabaseImages\53.png" />
+    <Content Include="DatabaseImages\54.png" />
+    <Content Include="DatabaseImages\55.png" />
+    <Content Include="DatabaseImages\56.png" />
+    <Content Include="DatabaseImages\57.png" />
+    <Content Include="DatabaseImages\58.png" />
+    <Content Include="DatabaseImages\59.png" />
+    <Content Include="DatabaseImages\6.png" />
+    <Content Include="DatabaseImages\60.png" />
+    <Content Include="DatabaseImages\61.png" />
+    <Content Include="DatabaseImages\62.png" />
+    <Content Include="DatabaseImages\63.png" />
+    <Content Include="DatabaseImages\64.png" />
+    <Content Include="DatabaseImages\65.png" />
+    <Content Include="DatabaseImages\66.png" />
+    <Content Include="DatabaseImages\67.png" />
+    <Content Include="DatabaseImages\68.png" />
+    <Content Include="DatabaseImages\69.png" />
+    <Content Include="DatabaseImages\7.png" />
+    <Content Include="DatabaseImages\70.png" />
+    <Content Include="DatabaseImages\71.png" />
+    <Content Include="DatabaseImages\72.png" />
+    <Content Include="DatabaseImages\73.png" />
+    <Content Include="DatabaseImages\74.png" />
+    <Content Include="DatabaseImages\75.png" />
+    <Content Include="DatabaseImages\76.png" />
+    <Content Include="DatabaseImages\77.png" />
+    <Content Include="DatabaseImages\78.png" />
+    <Content Include="DatabaseImages\79.png" />
+    <Content Include="DatabaseImages\8.png" />
+    <Content Include="DatabaseImages\80.png" />
+    <Content Include="DatabaseImages\81.png" />
+    <Content Include="DatabaseImages\82.png" />
+    <Content Include="DatabaseImages\83.png" />
+    <Content Include="DatabaseImages\84.png" />
+    <Content Include="DatabaseImages\85.png" />
+    <Content Include="DatabaseImages\86.png" />
+    <Content Include="DatabaseImages\87.png" />
+    <Content Include="DatabaseImages\88.png" />
+    <Content Include="DatabaseImages\89.png" />
+    <Content Include="DatabaseImages\9.png" />
+    <Content Include="DatabaseImages\90.png" />
+    <Content Include="DatabaseImages\91.png" />
+    <Content Include="DatabaseImages\92.png" />
+    <Content Include="DatabaseImages\93.png" />
+    <Content Include="DatabaseImages\94.png" />
+    <Content Include="DatabaseImages\95.png" />
+    <Content Include="DatabaseImages\96.png" />
+    <Content Include="DatabaseImages\97.png" />
+    <Content Include="DatabaseImages\98.png" />
+    <Content Include="DatabaseImages\99.png" />
+    <Content Include="DatabaseWords\Adjectives.txt" />
+    <Content Include="DatabaseWords\Nouns.txt" />
+    <Content Include="DatabaseWords\Verbs.txt" />
+    <Content Include="Images\can.png" />
+    <Content Include="Images\finger.png" />
+    <Content Include="Images\home-icon.png" />
+    <Content Include="Images\InstructionCard.PNG" />
+    <Content Include="Images\left.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\right.png" />
+    <Content Include="Images\trashBin.png" />
+    <Content Include="Properties\Default.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BrowseCards.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SavedCard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Card.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InstructionCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.NET.Native.Runtime.1.1, Version=1.1">
+      <Name>Microsoft .NET Core Runtime Package for Windows</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.VCLibs, Version=14.0">
+      <Name>Visual C++ 2015 Runtime for Universal Windows Platform Apps</Name>
+    </SDKReference>
+    <SDKReference Include="SQLite.UAP.2015, Version=3.9.2">
+      <Name>SQLite for Universal App Platform %28SQLite.UAP.2015, Version=3.9.2%29</Name>
+    </SDKReference>
+    <SDKReference Include="WindowsMobile, Version=10.0.10240.0">
+      <Name>Windows Mobile Extensions for the UWP</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
