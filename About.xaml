@@ -17,8 +17,8 @@
                 <Bold>
                     <LineBreak/>
                 </Bold>
-                <Run FontWeight="Normal" Foreground="White" Text="I Have Ideas have been made as part of the &quot;Mobile Application Design&quot; course at Metropolia (University of Applied Sciences in Finland)." FontSize="17.667"/>
-                <Run FontWeight="Normal" Foreground="White" Text=" This application was created specially for those who have problems creating a story. " FontSize="17.667"/>
+                <Run FontWeight="Normal" Foreground="White" Text="IHaveIdeas was originally made as part of the &quot;Mobile Application Design&quot; course at Metropolia (University of Applied Sciences in Finland)." FontSize="17.667"/>
+                <Run FontWeight="Normal" Foreground="White" Text=" This program was futher developed v This application was created specially for those who have problems creating a story.  " FontSize="17.667"/>
             </Paragraph>
             <Paragraph/>
             <Paragraph/>
