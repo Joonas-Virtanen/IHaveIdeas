@@ -47,7 +47,6 @@ namespace IHaveIdeas
                 {
                     //Number of packs
                     int size = MainPage.numberOfPacks;
-                    IList<int> savedCardList = null;
                     //Retrieves all savedcards
                     IEnumerable<SavedCards> query = db.Table<SavedCards>().OrderBy(x => x.CardNumber);
                     //Used to retrieve all cards in a pack
@@ -55,19 +54,18 @@ namespace IHaveIdeas
                     for (int pack = 1; pack <= size; pack++)
                     {
                         packquery = query.Where(x => x.PackNumber == pack).Select(x => x.Image);
-                        savedCardList = packquery.ToList();
-                        for (card = 0; card <= savedCardList.Count - 1; card++)// Place correct images to the buttons
+                        for (card = 0; card <= packquery.Count() - 1; card++)// Place correct images to the buttons
                         {
                             Button button = new Button { };
                             name = "SavedCardP" + pack + "C" + card;
                             button = (Button)FindName(name);
                             var brush = new ImageBrush();
                             //Select a image that corresponds with card number
-                            int image = savedCardList.ElementAt(card);
+                            int image = packquery.ElementAt(card);
                             brush.ImageSource = new BitmapImage(new Uri(@"ms-appx:///" + FolderPath + "/" + Convert.ToString(image) + ImageEnding));
                             button.Background = brush;
                         }
-                        for (int emptyCard = savedCardList.Count; emptyCard <= 11; emptyCard++) // Place empty images
+                        for (int emptyCard = packquery.Count(); emptyCard <= 11; emptyCard++) // Place empty images
                         {
                             Button button = new Button { };
                             name = "SavedCardP" + pack + "C" + emptyCard;
@@ -76,7 +74,6 @@ namespace IHaveIdeas
                             brush.ImageSource = new BitmapImage(new Uri(@"ms-appx:///Images/Card2.png"));
                             button.Background = brush;
                         }
-
                     }
                 }
             }

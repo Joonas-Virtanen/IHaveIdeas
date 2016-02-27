@@ -10,22 +10,22 @@ namespace IHaveIdeas.Data
     class DatabaseUpdate
     {
         /// <summary>
-        /// Reorders saved cards after delete. 
+        /// Reorders saved cards pivot page cards after delete. 
         /// </summary>
-        /// <param name="pack">The pack where a card was removed</param>
-        /// <param name="card">Position of the card where it was removed</param>
+        /// <param name="pack">The pack number where a card was removed</param>
+        /// <param name="card">Position number of the card where card was removed</param>
         public void ReOrderSavedCards(int pack, int card)
         {
-            int newCardNumber = card;
+            int newCardPosition = card;
             using (SQLite.Net.SQLiteConnection db = new SQLite.Net.SQLiteConnection(new SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), App.path))
             {
                 IEnumerable<SavedCards> reOrderQuery = db.Table<SavedCards>()
                 .Where(x => x.PackNumber == pack && x.CardNumber > card);
                 foreach (SavedCards savedCard in reOrderQuery)
                 {
-                    savedCard.CardNumber = newCardNumber;
+                    savedCard.CardNumber = newCardPosition;
                     db.Update(savedCard);
-                    newCardNumber++;
+                    newCardPosition++;
                 }
             }
         }
