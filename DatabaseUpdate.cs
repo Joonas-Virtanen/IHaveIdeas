@@ -13,14 +13,14 @@ namespace IHaveIdeas.Data
         /// Reorders saved cards pivot page cards after delete. 
         /// </summary>
         /// <param name="pack">The pack number where a card was removed</param>
-        /// <param name="card">Position number of the card where card was removed</param>
-        public void ReOrderSavedCards(int pack, int card)
+        /// <param name="cardPosition">Position number of the card where card was removed</param>
+        public void ReOrderSavedCards(int pack, int cardPosition)
         {
-            int newCardPosition = card;
+            int newCardPosition = cardPosition;
             using (SQLite.Net.SQLiteConnection db = new SQLite.Net.SQLiteConnection(new SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), App.path))
             {
                 IEnumerable<SavedCards> reOrderQuery = db.Table<SavedCards>()
-                .Where(x => x.PackNumber == pack && x.CardNumber > card);
+                .Where(card => card.PackNumber == pack && card.CardNumber > cardPosition);
                 foreach (SavedCards savedCard in reOrderQuery)
                 {
                     savedCard.CardNumber = newCardPosition;
